@@ -1,9 +1,14 @@
 import java.util.Scanner;
+// Math.pow()
+// Math.ceil()
+// Math.sqrt()
+// Math.PI()
+// Math.floor()
 
 public class MathClasses {
         public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
+            
         /* System.out.print("Enter x1: ");
         double x1 = sc.nextDouble();
         System.out.print("Enter y1: ");

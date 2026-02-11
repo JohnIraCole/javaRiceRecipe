@@ -18,6 +18,7 @@ public class GuessingGame{
             System.out.println("If you can guess the number before running out of guesses I'll give you a reward.");
 
                 while(numGuesses != 0){
+                    System.out.println("\nHint: " + randomNumber);
                     System.out.print("\nGuess: ");
                     int guess = sc.nextInt();
                     if(guess != randomNumber){

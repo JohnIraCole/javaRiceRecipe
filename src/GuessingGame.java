@@ -1,4 +1,4 @@
-import java.util.Scanner; // For input/output operations 
+import java.util.Scanner; // For input/output operations
 import java.util.Random; // Generates random values of each data type
 
 public class GuessingGame{
@@ -10,7 +10,7 @@ public class GuessingGame{
         int numGuesses = 5;
 
         System.out.print("\nDo you wanna play a game(Yes/No): ");
-        String question = sc.nextLine(); question = question.toUpperCase(); 
+        String question = sc.nextLine(); question = question.toUpperCase();
         // Converts string to all caps incase user inputs small caps.
 
         if(question.equals("YES")){
@@ -25,7 +25,7 @@ public class GuessingGame{
                         numGuesses--;
                         System.out.println("Wrong guess, Try again!");
                         System.out.println("You have " + numGuesses + " guesses remaining.");
-                    }                        
+                    }
                     else{
                         System.out.println("You guessed the number!");
                         System.out.println("As a reward here's $1,000,000");
@@ -42,6 +42,6 @@ public class GuessingGame{
         else{
             System.out.println("\nAwe too bad :(");
         }
-        
+
     }
 }

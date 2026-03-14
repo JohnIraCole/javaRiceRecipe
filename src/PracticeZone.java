@@ -1,32 +1,22 @@
 import java.util.Scanner; // For input/output operations
+import java.util.Arrays;
 
 public class PracticeZone{
 	public static void main(String[] args){
 				Scanner sc = new Scanner(System.in);
 
-				System.out.print("Enter # of rows: ");
-				int rows = sc.nextInt();
+				String[] people1 = {"Cole","JD","Arron","Jepax","Jake","Clyde","Reynel","Duu"};
+				//String[] people2 = {"Joan","Jamaica","Izza","Sasha","Bossing","Kim","Bagasawe","Tomboys"};
+				
+				String[] newPeople = Arrays.copyOf(people1, 10);
 
-				System.out.print("Enter # of columns: ");
-				int col = sc.nextInt();
+				System.out.println(newPeople);
 
-				System.out.print("Enter symbol: ");
-				String symbol = sc.next();
-
-				for(int i = 1; i <= rows; i++){
-					for(int j = col; j >= i; j--){
-						System.out.print(" ");
-					}
-					for(int k = 1; k <= i; k++){
-						System.out.print(symbol + "");
-					}
-					for(int t = 1; t <= i;t++){
-						if(t == 1)
-							continue;
-						else
-							System.out.print(symbol + "");
-					}
-					System.out.println();
+				for(int i = 0; i < newPeople.length;i++){
+					if(newPeople[i] == null)
+						System.out.println("Blank Space");
+					else
+						System.out.println(newPeople[i] + "");
 				}
 
 				sc.close();

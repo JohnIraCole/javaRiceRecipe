@@ -5,21 +5,37 @@ public class PracticeZone{
 	public static void main(String[] args){
 				Scanner sc = new Scanner(System.in);
 
-				String[] people1 = {"Cole","JD","Arron","Jepax","Jake","Clyde","Reynel","Duu"};
-				//String[] people2 = {"Joan","Jamaica","Izza","Sasha","Bossing","Kim","Bagasawe","Tomboys"};
-				
-				String[] newPeople = Arrays.copyOf(people1, 10);
+				int[] scores = {150, 0, 200, 150, 75, 0, 300, 200};
+				int[] newScores = new int[scores.length];
 
-				System.out.println(newPeople);
+				int j = 0;
 
-				for(int i = 0; i < newPeople.length;i++){
-					if(newPeople[i] == null)
-						System.out.println("Blank Space");
+				for(int i = 0; i < scores.length; i++){
+					if(scores[i] == 0)
+						continue;			
 					else
-						System.out.println(newPeople[i] + "");
+						newScores[j++] = scores[i];
 				}
 
-				sc.close();
+				newScores = Arrays.copyOf(newScores,6);
+				Arrays.sort(newScores);
 
+				for(int elements : newScores){
+					System.out.println(elements);
+				}
+
+				/*for(int i = 0; i < scores.length; i++){
+					for(int j = 0; j < scores.length - 1; j++){
+						if(scores[i] == scores[j + 1]){
+							newScores[i] = scores[i];
+						}
+					}
+				
+
+				for(int elements : newScores)		
+					System.out.println(elements);
+				}*/
+
+				sc.close();
 	}
 }

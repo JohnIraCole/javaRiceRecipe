@@ -11,6 +11,7 @@ public class LeaderBoardCleaner {
 
 		int j = 0;
 
+        //removes zeros
 		for(int i = 0; i < scores.length; i++){
 			if(scores[i] == 0)
 				continue;			
@@ -24,6 +25,7 @@ public class LeaderBoardCleaner {
          
 		int unique = 0;
 
+        //removes duplicates
         for(int i = 0; i < newScores.length; i++){
             boolean isDuplicate = false;
             for(int k = 0; k < newScores.length; k++){
@@ -39,6 +41,7 @@ public class LeaderBoardCleaner {
 
         Arrays.sort(finalScore);
 
+        System.out.println("Top 3 Scores: ");
         //I just copied this from gpt cuz I was having a headache
         for (int i = finalScore.length - 1; i >= finalScore.length - 3; i--) {
             System.out.println(finalScore[i]);

@@ -21,33 +21,25 @@ public class TwoDimensional{
 		*/
 		
 		// **** SUM OF ROWS OF EACH ROWS ****
-		/* 
-		int sum1 = 0;
-		int sum2 = 0;
-		int sum3 = 0;
-
+		/*
 		int[][] arr = {{1,2,3},
 					   {4,5,6},
 					   {7,8,9}}; 
 		
+		int[] rowSum = new int[arr.length];
+
 		for(int i = 0; i < arr.length;i++){
 			for(int j = 0; j < arr[i].length; j++){
-				if(arr[i] == arr[0]){
-					sum1 += arr[i][j];
-				}
-				else if(arr[i] == arr[1]){
-					sum2 += arr[i][j];
-				}
-				else{
-					sum3 += arr[i][j];
-				}
+				rowSum[i] += arr[i][j];
 			}
 			
 		}
-		System.out.println("Sum of first array: " + sum1);
-		System.out.println("Sum of second array: " + sum2);
-		System.out.println("Sum of third array: " + sum3);
+		
+		for(int i = 0; i < arr.length; i++){
+			System.out.println("Sum of row " + (i + 1) + ": " + rowSum[i]);
+		}
 		*/
+		
 		
 		// **** FIND MIN AND MAX ****
 		/*int[][] arr = {{9,2,3},

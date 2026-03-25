@@ -12,8 +12,8 @@ public class Patterns {
         System.out.print("Enter # of columns: ");
         int columns = sc.nextInt();
 
-        pyramid(symbol,rows,columns);
-        reversePyramid(symbol,rows,columns);
+        doubleHill(symbol,rows,columns);
+        
 
         sc.close();
     }

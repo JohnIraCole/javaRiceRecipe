@@ -3,6 +3,7 @@ public class Patterns {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
+        /* 
         System.out.print("Enter symbol: ");
         String symbol = sc.next();
 
@@ -13,7 +14,35 @@ public class Patterns {
         int columns = sc.nextInt();
 
         doubleHill(symbol,rows,columns);
+        */
+        int num = 1;
+        int value = 0;
+        /* 
+        for(int elements : arr){
+            System.out.println(elements);
+        }
+        */
         
+        for(int i = 0; i < 5 ; i++){
+            //FOR SPACES
+            for(int j = 5; j > i; j--){
+                System.out.print(" ");
+            }
+            for(int k = 0; k <= i; k++){
+                if(k == 0 || k == i){
+                    System.out.print(num + " ");
+                }
+                else{
+                    for(int p = 0; p < i - k ; p++){
+                        value += num + num;
+                        System.out.print(value + " ");
+                    }
+                }
+
+            }
+
+            System.out.println();
+        }
 
         sc.close();
     }

@@ -1,61 +1,31 @@
 import java.util.Scanner; // For input/output operations
-import java.util.Arrays;
 
 public class PracticeZone{
 
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-
-		double total = 0;
-		double max = 0;
-		Product[] product = {
-							new Product("RTX2000", 1000),
-							new Product("iPhone",500),
-							new Product("Android",200),
-							new Product("MateBook",700),
-							};
-							
-		System.out.println();
-		// Print all products with price greater than 500
-		for(int i = 0; i < product.length; i++){
-			double priceIncrease = 0.1;
-			if(product[i].price >= 500){
-				System.out.println(product[i].name + " " + product[i].price);
-			}
-			
-			// Increase all product prices by 10%
-			product[i].price += product[i].price * priceIncrease;
-
-			// Calculate the total price of all products
-			total += product[i].price;
-			
-			// Find the product with the highest price
-			if(product[i].price  > max){
-				max = product[i].price;
-			}
-		}
-
-		System.out.println("Prices after 10% increase: ");
-		for(int i = 0 ; i < product.length; i++){
-			System.out.println(product[i].name + ": " + product[i].price);
-		}
+		Student s = new Student("Cole","24-1440-626", 4.5);
 		
-		
-		// Sort products by price (ascending)
-		System.out.println("\n" + total);
-		System.out.println(max + " \n");
-		
+		System.out.println(s);
 		sc.close();
 	}
 }
 
-class Product{
-	String name;
-	double price;
+class Student{
 
-	Product(String nameOfProduct, double priceOfProduct){
-		this.name = nameOfProduct;
-		this.price = priceOfProduct;
+	String name;
+	String id;
+	double gpa;
+
+	Student(String name, String id, double gpa){
+		this.name = name;
+		this.id = id;
+		this.gpa = gpa;
 	}
 
+	@Override
+	public String toString(){
+		return this.name + " " + this.id + " " + gpa; 
+	}
 }
+

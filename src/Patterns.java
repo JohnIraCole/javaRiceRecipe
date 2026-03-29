@@ -15,37 +15,48 @@ public class Patterns {
 
         doubleHill(symbol,rows,columns);
         */
-        int num = 1;
-        int value = 0;
+        
         /* 
         for(int elements : arr){
             System.out.println(elements);
         }
         */
         
-        for(int i = 0; i < 5 ; i++){
-            //FOR SPACES
-            for(int j = 5; j > i; j--){
-                System.out.print(" ");
-            }
-            for(int k = 0; k <= i; k++){
-                if(k == 0 || k == i){
-                    System.out.print(num + " ");
-                }
-                else{
-                    for(int p = 0; p < i - k ; p++){
-                        value += num + num;
-                        System.out.print(value + " ");
-                    }
-                }
-
-            }
-
-            System.out.println();
-        }
+        pascalsTriangle();
 
         sc.close();
     }
+
+    static void pascalsTriangle(){
+        int num = 1;
+        int value = 1;
+        int temp = 0;
+        for(int i = 0; i < 5 ; i++){
+            // FOR SPACES
+            for(int j = 5; j > i; j--){
+                System.out.print(" ");
+            }
+            
+            for(int k = 0; k <= i; k++){
+                // FOR 1
+                if(k == 0 || k == i){
+                    System.out.print(num + " ");
+                    temp = k;
+                }
+                // FORMULA
+                else
+                {
+                    for(int p = 0; p <= temp; p++){
+                        value = value + num;
+                        System.out.print(value + " ");
+
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+
     static void pyramid(String symbol, int row, int column){
         System.out.println("\nPYRAMID");   
         for(int i = 0; i < row; i++){

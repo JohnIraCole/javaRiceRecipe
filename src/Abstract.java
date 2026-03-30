@@ -12,9 +12,9 @@ public class Abstract {
 
 abstract class Shape{
     
-    abstract double area();
+    abstract double area(); // ABSTRACT
 
-    void display(){
+    void display(){ // CONCRETE
         System.out.println("This is a shape");
     }
 

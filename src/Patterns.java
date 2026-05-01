@@ -49,7 +49,6 @@ public class Patterns {
                     for(int p = 0; p <= temp; p++){
                         value = value + num;
                         System.out.print(value + " ");
-
                     }
                 }
             }

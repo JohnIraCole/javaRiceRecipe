@@ -5,7 +5,7 @@ public class TwoDimensional{
 		java.util.Scanner sc = new Scanner(System.in);
 
 		// **** SUM OF ELEMENTS ****
-		/* 
+		
 		int sum = 0;
 		int[][] arr = {{1,2,3},
 					   {4,5,6},
@@ -18,7 +18,7 @@ public class TwoDimensional{
 		}
 
 		System.out.println("Sum: " + sum );
-		*/
+		
 		
 		// **** SUM OF ROWS OF EACH ROWS ****
 		/*
